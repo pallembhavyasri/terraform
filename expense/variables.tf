@@ -2,6 +2,8 @@
 #2. is .tfvars var
 #3. environment var
 #4. default 
+
+#instance variables
 variable "ami_image_id" {
     type = string
     default = "ami-090252cbe067a9e58"
@@ -29,6 +31,7 @@ variable "common_tags"{
     }
 }
 
+#sg variables
 variable "sg_name"{
     default = "allow_ssh"
 }
@@ -54,4 +57,15 @@ variable "SSH_tags"{
 
 variable "SSH_port"{
     default = 22 
+}
+
+
+#r53 variables
+
+variable "zone_id"{
+    default = "Z0594556UZMHX8MM4MSM"
+}
+
+variable "domain_name"{
+    default = "bhavya.store"
 }
