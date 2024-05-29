@@ -4,6 +4,8 @@ resource "aws_security_group" "allow_ports" {
     name = "allow_ports"
     description = "Allowing 80,22,8080,3306 ports"
 
+    #dynamic blocks are used if we want to reuse the code with in a resource 
+
      dynamic "ingress" {
         for_each = var.inbound_rules
         content{
